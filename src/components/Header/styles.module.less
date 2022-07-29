@@ -1,0 +1,66 @@
+@import url('../../app.styles.module.less');
+
+.greeting {
+	.wrap(630px, 250px, block);
+	font-family: @content_font;
+    font-size: 30px;
+    line-height: 34px;
+    color: #666666; 
+	.personId {
+		display: inline-flex;
+        color: #000000;
+        margin-left: 5px;
+    }
+}
+
+.statusButton {
+	.wrap(88px,88px, inline-flex);
+	&__text {
+		font-family: @content_font;
+		font-size: 12px;
+		line-height: 22px;
+		color: #0C77BB;
+		cursor: pointer;
+		&:hover {
+			color: #074d78;
+		};
+		
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		width: 86px;
+		bottom: 0px;
+		height: 0px;
+		left: 0;
+		border: 1px dashed #0C77BB;
+	}
+}
+
+.statusTooltip {
+	.wrap(503px, 185px, inline-flex);
+    height: 46px;
+    background: #EAEAEA;
+	align-items: center;
+	margin: 11px 0px 0 234px;
+	z-index: 2;
+	&:after {
+        content: '';
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        left:8px;
+        bottom: 38px;
+        background: #EAEAEA;
+        transform: rotate(45deg);
+		z-index: 1;
+    };
+	&__text {
+		font-family: @content_font;
+		font-size: 14px;
+		line-height: 22px;
+		color: #404040;
+		margin-left: 14px;
+		z-index: 3;
+	};
+}

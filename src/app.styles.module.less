@@ -1,0 +1,39 @@
+@content_font: 'Arial';
+
+.wrap(@width, @min_width, @display) {
+	position: relative;
+	display: @display;
+	width: @width;
+	min-width: @min_width;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+}
+
+.header {
+	display: flex;
+	align-items: baseline;
+	margin-left: 10px;
+}
+
+.line {
+	width: 990px;
+    height: 0px;
+    border: 1px solid #E5E4E4;
+}
+
+.emptyBlock {
+	.wrap(224px, 150px, inline-flex);
+}
+
+.lastChangeText {
+	.wrap(622px, 70px, inline-flex);
+	&__text {
+		font-family: @content_font;
+		font-size: 12px;
+		line-height: 20px;
+		color: #999999;
+	}
+}

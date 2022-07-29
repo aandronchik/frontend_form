@@ -1,0 +1,51 @@
+@import url('../../app.styles.module.less');
+
+.input {
+	.wrap(335px, 200px, inline-flex);
+	margin-right: 18px;
+	.inputItem {
+		width: 335px;
+		height: 31px;
+		border: 1px solid #999999;
+		padding: 0 12px;
+		font-family: @content_font;
+		font-size: 16px;
+		line-height: 19px;
+		color: #000000;
+		&:focus {
+			outline: none;
+			border: 1px solid #424242;
+		}
+		&:hover {
+			outline: none;
+			border: 1px solid #424242;
+		}
+	}
+	.inputItemError {
+		width: 335px;
+		height: 31px;
+		border: 1px solid #FF0000;
+		padding: 0 12px;
+		font-family: @content_font;
+		font-size: 16px;
+		line-height: 19px;
+		color: #000000;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			outline: none;
+			border: 1px solid #FF0000;
+		}
+	}
+}
+
+.errorMessage {
+	display: block;
+	position: absolute;
+	font-family: @content_font;
+	font-size: 12px;
+	line-height: 20px;
+	color: #FF0000;
+	margin-top: 35px;
+}

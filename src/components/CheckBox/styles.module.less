@@ -1,0 +1,37 @@
+@import url('../../app.styles.module.less');
+
+.checkbox {
+	.wrap(753px, 250px, inline-flex);
+}
+
+@vector: url('../../images/vector.png');
+
+.checkboxItem {
+	display: inline-flex;
+	align-items: center;
+	font-family: @content_font;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+	cursor: pointer;
+	&__input {
+		display: none;
+	}
+	&__box {
+		width: 12px;
+        height: 12px;
+        border: 1px solid #7E7E7E;
+        display: flex;
+		align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        flex-shrink: 0;
+        &::after {
+            content: '';
+            color: #ffff;
+        }
+	}
+	&__input:checked + &__box {
+        content: @vector;
+    }
+}
